@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AmberWatch</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AmberWatch.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"> <!-- Đường dẫn đến Bootstrap -->
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css"> <!-- Đường dẫn đến Font Awesome nếu cần -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand text-warning fw-bold" href="/">AMBERWATCH.COM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mx-auto">
+                        <!-- BÁN CHẠY -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="banchayDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                BÁN CHẠY
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="banchayDropdown">
+                                <li><a class="dropdown-item" href="#">Đồng hồ nam</a></li>
+                                <li><a class="dropdown-item" href="#">Đồng hồ nữ</a></li>
+                            </ul>
+                        </li>
+                        <!-- THƯƠNG HIỆU -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="thuonghieuDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                THƯƠNG HIỆU
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="thuonghieuDropdown">
+                                <li><a class="dropdown-item" href="#">Rolex</a></li>
+                                <li><a class="dropdown-item" href="#">Casio</a></li>
+                                <li><a class="dropdown-item" href="#">Citizen</a></li>
+                            </ul>
+                        </li>
+                        <!-- NAM -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="namDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                NAM
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="namDropdown">
+                                <li><a class="dropdown-item" href="#">Đồng hồ cơ</a></li>
+                                <li><a class="dropdown-item" href="#">Đồng hồ điện tử</a></li>
+                            </ul>
+                        </li>
+                        <!-- NỮ -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="nuDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                NỮ
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="nuDropdown">
+                                <li><a class="dropdown-item" href="#">Đồng hồ thời trang</a></li>
+                                <li><a class="dropdown-item" href="#">Đồng hồ đính đá</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Icon Tìm kiếm -->
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                        <button class="btn btn-outline-warning" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+
+                    <!-- Phần bên phải -->
+                    <ul class="navbar-nav">
+                        <!-- Hiển thị Login/Register nếu chưa đăng nhập -->
+                        <li class="nav-item" id="loginSection">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account"
+                                asp-action="Login">Login</a>
+                        </li>
+                        <li class="nav-item" id="registerSection">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account"
+                                asp-action="Register">Register</a>
+                        </li>
+
+                        <!-- Hiển thị Avatar/Logout khi đăng nhập -->
+                        <li class="nav-item dropdown d-none" id="userSection">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/images/default-avatar.png" alt="User" class="rounded-circle" width="30"
+                                    height="30">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="/Profile">Profile</a></li>
+                                <li>
+                                    <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+                                        <button type="submit" class="dropdown-item">Logout</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="pt-5 pb-4">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-3">
+
+                </div>
+                <div class="col-6">
+                    <div class="containers mt-3">
+                        <div class="row">
+                            <!-- Thông tin về ShareCar -->
+                            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                                <h5 class="text-uppercase mb-4 font-weight-bold">AmberWatch</h5>
+                                <p>AmberWatch là nền tảng mua bán đồng hồ uy tín trên thị trường việt nam</p>
+                            </div>
+
+                            <!-- Thông tin liên hệ -->
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                                <h5 class="text-uppercase mb-4 font-weight-bold">Thông tin liên hệ</h5>
+                                <p><i class="bi bi-geo-alt-fill me-2"></i>Địa chỉ: Số 96 Định Công, Hà Nội</p>
+                                <p><i class="bi bi-envelope-fill me-2"></i>Email contact: nvmanhfc03@gmail.com</p>
+                                <p><i class="bi bi-phone-fill me-2"></i>Liên hệ: +84 332 536 581</p>
+                            </div>
+
+                            <!-- Chính sách -->
+                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                                <h5 class="text-uppercase mb-4 font-weight-bold">Chính sách</h5>
+                                <p><a href="#" class="text-decoration-none">Chính sách bảo mật</a></p>
+                                <p><a href="#" class="text-decoration-none">Điều khoản sử dụng</a></p>
+                                <p><a href="#" class="text-decoration-none">Chính sách hoàn trả</a></p>
+                            </div>
+
+                            <!-- Mạng xã hội -->
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                                <h5 class="text-uppercase mb-4 font-weight-bold">Theo dõi chúng tôi</h5>
+                                <a href="#" class="me-4"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="me-4"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="me-4"><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Dòng copyright -->
+                        <div class="row mt-4">
+                            <div class="col-md-12 text-center">
+                                <p class="text-muted">© 2024 AmberWatch. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
