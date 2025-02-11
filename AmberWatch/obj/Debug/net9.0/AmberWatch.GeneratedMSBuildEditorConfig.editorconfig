@@ -52,6 +52,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Home/Watch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxXYXRjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Home/WatchAutomatic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxXYXRjaEF1dG9tYXRpYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Home/WatchQuartz.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxXYXRjaFF1YXJ0ei5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

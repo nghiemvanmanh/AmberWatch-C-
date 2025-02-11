@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "d:\\AmberWatch C#\\AmberWatch\\wwwroot\\images\\anh1.jpg",
+      "PackagePath": "staticwebassets\\images\\anh1.jpg"
+    },
+    {
+      "Id": "d:\\AmberWatch C#\\AmberWatch\\wwwroot\\images\\banner.jpg",
+      "PackagePath": "staticwebassets\\images\\banner.jpg"
+    },
+    {
       "Id": "d:\\AmberWatch C#\\AmberWatch\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

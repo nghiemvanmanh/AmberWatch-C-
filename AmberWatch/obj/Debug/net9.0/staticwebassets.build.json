@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "C2bAc7S3a/1EpxxwhYgkOL4NLWR5t5Pi9r+2Tu9J6AI=",
+  "Hash": "aDZig+uHtlQef6aL5twKuTK1ygUMUWcllpGhcojm2zo=",
   "Source": "AmberWatch",
   "BasePath": "_content/AmberWatch",
   "Mode": "Default",
@@ -1443,6 +1443,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "d:\\AmberWatch C#\\AmberWatch\\wwwroot\\images\\anh1.jpg",
+      "SourceId": "AmberWatch",
+      "SourceType": "Discovered",
+      "ContentRoot": "d:\\AmberWatch C#\\AmberWatch\\wwwroot\\",
+      "BasePath": "_content/AmberWatch",
+      "RelativePath": "images/anh1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x256ys9vhy",
+      "Integrity": "OQGA3Ca9zLg4g/ufHD3A6SjzY1uUxFHSfOTAu5Ka7jY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\anh1.jpg"
+    },
+    {
+      "Identity": "d:\\AmberWatch C#\\AmberWatch\\wwwroot\\images\\banner.jpg",
+      "SourceId": "AmberWatch",
+      "SourceType": "Discovered",
+      "ContentRoot": "d:\\AmberWatch C#\\AmberWatch\\wwwroot\\",
+      "BasePath": "_content/AmberWatch",
+      "RelativePath": "images/banner#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fgcco7fex3",
+      "Integrity": "D87ggY5NE4dkQbx2kfVUyzgnNhtaUcjTitpcMu5SDDM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\banner.jpg"
     },
     {
       "Identity": "d:\\AmberWatch C#\\AmberWatch\\wwwroot\\js\\site.js",
@@ -3916,6 +3958,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0="
+        }
+      ]
+    },
+    {
+      "Route": "images/anh1.jpg",
+      "AssetFile": "d:\\AmberWatch C#\\AmberWatch\\wwwroot\\images\\anh1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "255219"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OQGA3Ca9zLg4g/ufHD3A6SjzY1uUxFHSfOTAu5Ka7jY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 11 Feb 2025 09:55:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OQGA3Ca9zLg4g/ufHD3A6SjzY1uUxFHSfOTAu5Ka7jY="
+        }
+      ]
+    },
+    {
+      "Route": "images/anh1.x256ys9vhy.jpg",
+      "AssetFile": "d:\\AmberWatch C#\\AmberWatch\\wwwroot\\images\\anh1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "255219"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OQGA3Ca9zLg4g/ufHD3A6SjzY1uUxFHSfOTAu5Ka7jY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 11 Feb 2025 09:55:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x256ys9vhy"
+        },
+        {
+          "Name": "label",
+          "Value": "images/anh1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OQGA3Ca9zLg4g/ufHD3A6SjzY1uUxFHSfOTAu5Ka7jY="
+        }
+      ]
+    },
+    {
+      "Route": "images/banner.fgcco7fex3.jpg",
+      "AssetFile": "d:\\AmberWatch C#\\AmberWatch\\wwwroot\\images\\banner.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "300588"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D87ggY5NE4dkQbx2kfVUyzgnNhtaUcjTitpcMu5SDDM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Feb 2025 09:53:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fgcco7fex3"
+        },
+        {
+          "Name": "label",
+          "Value": "images/banner.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D87ggY5NE4dkQbx2kfVUyzgnNhtaUcjTitpcMu5SDDM="
+        }
+      ]
+    },
+    {
+      "Route": "images/banner.jpg",
+      "AssetFile": "d:\\AmberWatch C#\\AmberWatch\\wwwroot\\images\\banner.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "300588"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D87ggY5NE4dkQbx2kfVUyzgnNhtaUcjTitpcMu5SDDM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Feb 2025 09:53:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D87ggY5NE4dkQbx2kfVUyzgnNhtaUcjTitpcMu5SDDM="
         }
       ]
     },

@@ -1,11 +1,26 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model AmberWatch.Areas.Customer.Models.HomeModel;
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml"; // Nếu có sử dụng Layout
 }
+<div>
+    <img src="/images/banner.jpg" alt="" style="margin-left: -300px;" />
+</div>
+<div class="text-center" style="margin-top: 20px;">
+    <h2>ĐỒNG HỒ NAM NỮ CHÍNH HÃNG</h2>
+    <p style="color: red; font-style: bold;">___________</p>
+    <p>Chúng tôi cam kết mang lại những giá trị cao nhất, chế độ hậu mãi tốt nhất khi quý khách hàng tin
+        dùng & mua sắm đồng hồ nam nữ chính hãng của thương hiệu AmberWatch.com</p>
+</div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome Customer</h1>
+<div>
+    <div>
+        @Html.Partial("Watch", Model.watchModels)
+    </div>
+    <div>
+        @Html.Partial("WatchAutomatic", Model.watchModelAuto)
+    </div>
+    <div>
+        @Html.Partial("WatchQuartz", Model.watchModelQuartz)
+    </div>
 </div>

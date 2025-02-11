@@ -15,8 +15,10 @@ namespace AmberWatch.Controllers
     {
 
         private readonly AmberWatchDBContext _context;
-
-        public AccountController(AmberWatchDBContext _context){
+        private readonly IWebHostEnvironment _hostingEnvironment;
+        public AccountController(IWebHostEnvironment hostingEnvironment,AmberWatchDBContext _context)
+        {
+            _hostingEnvironment = hostingEnvironment;
             this._context = _context;
         }
 
@@ -49,7 +51,7 @@ namespace AmberWatch.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login (AccountModel account){
             if(ModelState.IsValid){
-                var acc = await _context.tbl_Account.FirstOrDefaultAsync(a => a.UserName.ToLower() == account.UserName.ToLower() && a.PassWord.ToLower() == account.PassWord.ToLower());
+                var acc = await _context.tbl_Account.FirstOrDefaultAsync(a => a.UserName.ToLower() == account.UserName.ToLower() && a.PassWord == account.PassWord);
                 if(acc == null){
                     ModelState.AddModelError("", "Tên đăng nhập hoặc mật khẩu không đúng!");
                     return View(account);
