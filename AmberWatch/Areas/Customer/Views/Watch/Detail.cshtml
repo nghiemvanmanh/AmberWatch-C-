@@ -1,0 +1,88 @@
+@model AmberWatch.Areas.Customer.Models.WatchModel;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Nếu có sử dụng Layout
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết đồng hồ</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .detail-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .detail-box p {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+         <a href="javascript:history.back()"><i class="bi bi-arrow-left-short" style="color: rgb(0, 0, 0); font-size: 40px; margin-left: -10px;"></i></a>
+        <div class="row">
+            <div style="margin-top: 60px;">
+                <div class="col-md-6 text-center">
+                    <div class="row">
+                        <div>
+                            
+                            <img src="@Model.img" alt="@Model.name" class="img-fluid rounded shadow" width="300">
+                        </div>
+                        <div>
+                            <h2 class="mb-3 text-primary">@Model.name</h2>
+                            <p><strong>Mô tả:</strong> @Model.description</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 detail-box">
+                    <h2>Thông tin bổ sung</h2>
+                    <p><strong>Thương hiệu:</strong> @Model.model</p>
+                    <hr>
+                    <p><strong>Hãng:</strong> @Model.brand</p>
+                    <hr>
+                    <p><strong>Bảo hành:</strong> @Model.insurance</p>
+                    <hr>
+                    <p><strong>Màu mặt số:</strong> @Model.dialcolor</p>
+                    <hr>
+                    <p><strong>Màu dây:</strong> @Model.wirecolor</p>
+                    <hr>
+                    <p><strong>Màu vỏ:</strong> @Model.shellcolor</p>
+                    <hr>
+                    <p><strong>Loại mặt số:</strong> @Model.dialtype</p>
+                    <hr>
+                    <p><strong>Loại dây:</strong> @Model.wiretype</p>
+                    <hr>
+                    <p><strong>Loại kính:</strong> @Model.grasstype</p>
+                    <hr>
+                    <p><strong>Loại máy:</strong> @Model.machinetype</p>
+                    <hr>
+                    <p><strong>Size mặt số:</strong> @Model.dialsize</p>
+                    <hr>
+                    <p><strong>Độ dày mặt số:</strong> @Model.dialthickness</p>
+                    <hr>
+                    <p><strong>Giới tính:</strong> @Model.sex</p>
+                    <hr>
+                    <p><strong>Chất liệu vỏ:</strong> @Model.shellmaterial</p>
+                    <hr>
+                    <p><strong>Giá:</strong> @($"{Model.price:0,0}₫")</p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

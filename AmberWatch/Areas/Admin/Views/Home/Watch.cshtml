@@ -1,0 +1,106 @@
+@model IEnumerable<AmberWatch.Areas.Customer.Models.WatchModel>
+
+<div class="container" style="margin-top: 15px; background: white; color: black;">
+    <a asp-action="Index" asp-controller="Home"><i class="bi bi-arrow-left-short" style="color: rgb(0, 0, 0); font-size: 40px; margin-left: -10px;"></i></a>
+    <h3>Danh Sách Đồng Hồ</h3>
+
+    @if (TempData["SuccessUpdate"] != null)
+    {
+        <div class="alert alert-success text-center">
+            @TempData["SuccessUpdate"]
+        </div>
+    }
+
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Hình ảnh</th>
+                <th>Thương hiệu</th>
+                <th>Hãng</th>
+                <th>Tên</th>
+                <th>Loại</th>
+                <th>Bảo hành</th>
+                <th>Màu mặt số</th>
+                <th>Mùa dây</th>
+                <th>Màu vỏ</th>
+                <th>Chống nước</th>
+                <th>Loại mặt số</th>
+                <th>Loại dây</th>
+                <th>Loại kính</th>
+                <th>Loại máy</th>
+                <th>Chất liệu vỏ</th>
+                <th>Giới tính</th>
+                <th>Size mặt số</th>
+                <th>Độ dày mặt số</th>
+                <th>Giá</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var watch in Model)
+            {
+                <tr id="watch-row-@watch.id_watch">
+                    <td>@watch.id_watch</td>
+                    <td>
+                        <img src="@watch.img" alt="@watch.model" width="80" height="80" class="img-thumbnail">
+                    </td>
+                    <td>@watch.model</td>
+                    <td>@watch.brand</td>
+                    <td>@watch.name</td>
+                    <td>@watch.collection</td>
+                    <td>@watch.insurance</td>
+                    <td>@watch.dialcolor</td>
+                    <td>@watch.wirecolor</td>
+                    <td>@watch.shellcolor</td>
+                    <td>@watch.waterresistant</td>
+                    <td>@watch.dialtype</td>
+                    <td>@watch.wiretype</td>
+                    <td>@watch.grasstype</td>
+                    <td>@watch.machinetype</td>
+                    <td>@watch.shellmaterial</td>
+                    <td>@watch.sex</td>
+                    <td>@watch.dialsize</td>
+                    <td>@watch.dialthickness</td>
+                    <td>@watch.price.ToString("C")</td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Watch", new { id = watch.id_watch })" class="btn btn-primary btn-sm me-2">Sửa</a>
+                        <button class="btn btn-danger btn-sm" onclick="Delete('@watch.id_watch')">Xóa</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function Delete(id) {
+        if (confirm("Bạn có chắc chắn muốn xóa đồng hồ này không?")) {
+            fetch(`/Watch/Delete/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    document.getElementById(`watch-row-${id}`).remove();
+                    alert("Xóa đồng hồ thành công!");
+                    location.reload();
+                } else {
+                    alert("Xóa đồng hồ thất bại!");
+                }
+            })
+            .catch(error => {
+                console.error("Lỗi:", error);
+                alert("Đã xảy ra lỗi khi xóa đồng hồ!");
+            });
+        }
+    }
+</script>

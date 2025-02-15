@@ -1,0 +1,128 @@
+@model AmberWatch.Areas.Customer.Models.WatchModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sửa Thông Tin Đồng Hồ</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <a href="javascript:history.back()">
+            <i class="bi bi-arrow-left-short" style="color: rgb(0, 0, 0); font-size: 40px;"></i>
+        </a>
+        <h2 class="text-center my-4">Sửa Thông Tin Đồng Hồ</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form asp-action="Edit" method="post" class="border p-4">
+                    <input type="hidden" asp-for="id_watch" />
+
+                    <div class="mb-3">
+                        <label asp-for="model" class="form-label">Thương hiệu</label>
+                        <input asp-for="model" class="form-control" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="brand" class="form-label">Hãng</label>
+                        <input asp-for="brand" class="form-control" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="name" class="form-label">Tên</label>
+                        <input asp-for="name" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="collection" class="form-label">Loại</label>
+                        <input asp-for="collection" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="insurance" class="form-label">Bảo hành</label>
+                        <input asp-for="insurance" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="dialcolor" class="form-label">Màu mặt số</label>
+                        <input asp-for="dialcolor" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="wirecolor" class="form-label">Màu dây</label>
+                        <input asp-for="wirecolor" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="shellcolor" class="form-label">Màu vỏ</label>
+                        <input asp-for="shellcolor" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="waterresistant" class="form-label">Chống nước</label>
+                        <input asp-for="waterresistant" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="dialsize" class="form-label">Size mặt số</label>
+                        <input asp-for="dialsize" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="dialthickness" class="form-label">Độ dày mặt số</label>
+                        <input asp-for="dialthickness" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="dialtype" class="form-label">Loại mặt số</label>
+                        <input asp-for="dialtype" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="wiretype" class="form-label">Loại dây</label>
+                        <input asp-for="wiretype" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="grasstype" class="form-label">Loại kính</label>
+                        <input asp-for="grasstype" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="machinetype" class="form-label">loại máy</label>
+                        <input asp-for="machinetype" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="shellmaterial" class="form-label">Chất liệu vỏ</label>
+                        <input asp-for="shellmaterial" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="sex" class="form-label">Giới tính</label>
+                        <input asp-for="sex" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="price" class="form-label">Giá</label>
+                        <input type="number" asp-for="price" class="form-control" step="0.01" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="description" class="form-label">Mô tả</label>
+                        <textarea asp-for="description" class="form-control"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="img" class="form-label">Ảnh</label>
+                        <input asp-for="img" class="form-control" />
+                    </div>
+
+                    <div class="form-group mt-3 text-center">
+                        <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                        <a asp-action="Watch" asp-controller="Home" class="btn btn-secondary">Hủy bỏ</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

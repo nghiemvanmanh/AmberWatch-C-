@@ -19,9 +19,9 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="position: fixed;
     width: 100%;
-    z-index: 999;">
+    z-index: 999; top: 0;">
             <div class="container">
-                <a class="navbar-brand text-warning fw-bold" href="/">AMBERWATCH.COM</a>
+                <a class="navbar-brand text-warning fw-bold" asp-area="Customer" asp-controller="Home" asp-action="Index">AMBERWATCH.COM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -94,6 +94,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Account"
                                 asp-action="Register">Register</a>
                         </li>
+                    
 
                         <!-- Hiển thị Avatar/Logout khi đăng nhập -->
                         <li class="nav-item dropdown d-none" id="userSection">

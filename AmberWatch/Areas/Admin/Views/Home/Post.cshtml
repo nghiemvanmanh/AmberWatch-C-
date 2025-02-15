@@ -1,0 +1,172 @@
+@model AmberWatch.Areas.Customer.Models.WatchModel;
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thêm mới đồng hồ</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .form-add {
+            margin: 0 auto;
+            border: 1px solid blanchedalmond;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Thêm đồng hồ mới</h2>
+        <form asp-action="Post" method="post" enctype="multipart/form-data" class="form-add">
+
+            <div class="mb-3">
+                <label asp-for="model" class="form-label">Thương hiệu</label>
+                <input asp-for="model" class="form-control" required />
+                <span asp-validation-for="model" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="brand" class="form-label">Hãng</label>
+                <input asp-for="brand" class="form-control" required />
+                <span asp-validation-for="brand" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="name" class="form-label">Tên</label>
+                <input asp-for="name" class="form-control" required />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="collection" class="form-label">Loại</label>
+                <select asp-for="collection" class="form-select">
+                    <option value="AUTOMATIC">AUTOMATIC</option>
+                    <option value="QUARTZ">QUARTZ</option>
+                </select>
+                <span asp-validation-for="collection" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="insurance" class="form-label">Bảo hành</label>
+                <input asp-for="insurance" class="form-control" />
+                <span asp-validation-for="insurance" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="dialcolor" class="form-label">Màu mặt số</label>
+                <input asp-for="dialcolor" class="form-control" />
+                <span asp-validation-for="dialcolor" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="wirecolor" class="form-label">Màu dây</label>
+                <input asp-for="wirecolor" class="form-control" />
+                <span asp-validation-for="wirecolor" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="shellcolor" class="form-label">Màu vỏ</label>
+                <input asp-for="shellcolor" class="form-control" />
+                <span asp-validation-for="shellcolor" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="waterresistant" class="form-label">Chống nước</label>
+                <select asp-for="waterresistant" class="form-select">
+                    <option value="3ATM">3ATM (30m)</option>
+                    <option value="5ATM">5ATM (50m)</option>
+                    <option value="8ATM">8ATM (80m)</option>
+                    <option value="10ATM">10ATM (100m)</option>
+                </select>
+                <span asp-validation-for="waterresistant" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="dialtype" class="form-label">Loại mặt số</label>
+                <input asp-for="dialtype" class="form-control" />
+                <span asp-validation-for="dialtype" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="wiretype" class="form-label">Loại dây</label>
+                <input asp-for="wiretype" class="form-control" />
+                <span asp-validation-for="wiretype" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="grasstype" class="form-label">Loại kính</label>
+                <input asp-for="grasstype" class="form-control" />
+                <span asp-validation-for="grasstype" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="machinetype" class="form-label">Loại máy</label>
+                <select asp-for="machinetype" class="form-select">
+                    <option value="Automatic">Cơ tự động (Automatic)</option>
+                    <option value="Quartz">Pin (Quartz)</option>
+                </select>
+                <span asp-validation-for="machinetype" class="text-danger"></span>
+            </div>
+
+
+            <div class="mb-3">
+                <label asp-for="shellmaterial" class="form-label">Chất liệu vỏ</label>
+                <input asp-for="shellmaterial" class="form-control" />
+                <span asp-validation-for="shellmaterial" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="sex" class="form-label">Giới tính</label>
+                <select asp-for="sex" class="form-select">
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                    <option value="Khác">Khác</option>
+                </select>
+                <span asp-validation-for="sex" class="text-danger"></span>
+            </div>
+
+
+            <div class="mb-3">
+                <label asp-for="dialsize" class="form-label">Size mặt số</label>
+                <input asp-for="dialsize" class="form-control" />
+                <span asp-validation-for="dialsize" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="dialthickness" class="form-label">Độ dày mặt số</label>
+                <input asp-for="dialthickness" class="form-control" />
+                <span asp-validation-for="dialthickness" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="price" class="form-label">Giá</label>
+                <input type="number" asp-for="price" class="form-control" step="0.01" required />
+                <span asp-validation-for="price" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="description" class="form-label">Mô tả</label>
+                <textarea asp-for="description" class="form-control"></textarea>
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="img" class="form-label">Ảnh</label>
+                <input type="file" asp-for="img" class="form-control" />
+                <span asp-validation-for="img" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Thêm đồng hồ</button>
+            <a asp-action="Index" asp-controller="Home" class="btn btn-secondary">Hủy</a>
+        </form>
+    </div>
+
+</body>
+
+</html>

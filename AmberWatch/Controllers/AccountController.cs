@@ -42,21 +42,24 @@ namespace AmberWatch.Controllers
                 }
                 _context.tbl_Account.Add(account);
                 await _context.SaveChangesAsync();
-                TempData["SuccessMessage"] = "Đăng ký tài khoản thành công! Bạn sẽ được chuyển hướng đến trang đăng nhập trong giây lát.";
+                TempData["SuccessMessage"] = "Đăng ký tài khoản thành công!";
+                return RedirectToAction("Login");
                 
             }
             return View(account);
         }
 
         [HttpPost("Login")]
-        public async Task<IActionResult> Login (AccountModel account){
+        public IActionResult Login (LoginModel account){
             if(ModelState.IsValid){
-                var acc = await _context.tbl_Account.FirstOrDefaultAsync(a => a.UserName.ToLower() == account.UserName.ToLower() && a.PassWord == account.PassWord);
-                if(acc == null){
+                var acc = _context.tbl_Account.FirstOrDefault(u=> u.UserName.ToLower() == account.UserName.ToLower() && u.PassWord.ToLower() == account.PassWord.ToLower());
+                if(acc == null ){
                     ModelState.AddModelError("", "Tên đăng nhập hoặc mật khẩu không đúng!");
                     return View(account);
                 }
-                return RedirectToAction("Index", "Home");
+                HttpContext.Session.SetString("User", account.UserName);
+                return RedirectToAction("Index", "Home",new { area = "Customer" });
+                
             }
             return View(account);
         }
