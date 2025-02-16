@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AmberWatch.Areas.Customer.Models;
 using AmberWatch.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace AmberWatch.Areas.Customer.Controllers
@@ -52,5 +53,21 @@ namespace AmberWatch.Areas.Customer.Controllers
             };
             return View(model);
         }
+
+        [HttpGet("Search")]
+    public async Task<IActionResult> Search(string query){
+        var watch =await _context.tbl_Watch.ToListAsync();
+        if (!string.IsNullOrEmpty(query))
+            {
+                watch = watch
+                    .Where(c => c.model.ToLower().Contains(query.ToLower()) || c.brand.ToLower().Contains(query.ToLower()))
+                    .ToList();
+            }
+        var model = new HomeModel{
+            watchModels = watch
+        };
+        ViewBag.key = query;
+        return View(model);  
+    }
     }
 }

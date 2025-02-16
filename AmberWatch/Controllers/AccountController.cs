@@ -63,5 +63,11 @@ namespace AmberWatch.Controllers
             }
             return View(account);
         }
+
+        [HttpPost("Logout")]
+        public IActionResult Logout(){
+            HttpContext.Session.Remove("User");
+            return RedirectToAction("Index", "Home",new { area = "Customer" });
+        }
     }
 }

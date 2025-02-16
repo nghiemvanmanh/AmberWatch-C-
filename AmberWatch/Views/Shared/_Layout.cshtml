@@ -17,11 +17,13 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="position: fixed;
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
+            style="position: fixed;
     width: 100%;
     z-index: 999; top: 0;">
             <div class="container">
-                <a class="navbar-brand text-warning fw-bold" asp-area="Customer" asp-controller="Home" asp-action="Index">AMBERWATCH.COM</a>
+                <a class="navbar-brand text-warning fw-bold" asp-area="Customer" asp-controller="Home"
+                    asp-action="Index">AMBERWATCH.COM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -76,8 +78,8 @@
                         </li>
                     </ul>
                     <!-- Icon Tìm kiếm -->
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                    <form asp-controller="Home" asp-action="Search" asp-area="Customer" class="d-flex" method="get" role="search">
+                        <input class="form-control me-2" name="query" type="search" placeholder="Tìm kiếm..." aria-label="Search">
                         <button class="btn btn-outline-warning" type="submit">
                             <i class="bi bi-search"></i>
                         </button>
@@ -86,32 +88,44 @@
                     <!-- Phần bên phải -->
                     <ul class="navbar-nav">
                         <!-- Hiển thị Login/Register nếu chưa đăng nhập -->
-                        <li class="nav-item" id="loginSection">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Account"
-                                asp-action="Login">Login</a>
-                        </li>
-                        <li class="nav-item" id="registerSection">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Account"
-                                asp-action="Register">Register</a>
-                        </li>
-                    
 
+
+                        @if (Context.Session.GetString("User") != null)
+                        {
+
+                            <li class="nav-item dropdown" id="userSection">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="https://static.vecteezy.com/system/resources/previews/000/423/286/original/avatar-icon-vector-illustration.jpg"
+                                        alt="User" class="rounded-circle" width="30" height="30">
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li>
+                                        <form asp-area="" asp-controller="Profile" asp-action="Logout" method="post">
+                                            <button type="submit" class="dropdown-item">Profile</button>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+                                            <button type="submit" class="dropdown-item">Logout</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item" id="loginSection">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account"
+                                    asp-action="Login">Login</a>
+                            </li>
+                            <li class="nav-item" id="registerSection">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account"
+                                    asp-action="Register">Register</a>
+                            </li>
+                        }
                         <!-- Hiển thị Avatar/Logout khi đăng nhập -->
-                        <li class="nav-item dropdown d-none" id="userSection">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="/images/default-avatar.png" alt="User" class="rounded-circle" width="30"
-                                    height="30">
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                                <li><a class="dropdown-item" href="/Profile">Profile</a></li>
-                                <li>
-                                    <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
-                                        <button type="submit" class="dropdown-item">Logout</button>
-                                    </form>
-                                </li>
-                            </ul>
-                        </li>
+
                     </ul>
                 </div>
             </div>
