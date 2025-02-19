@@ -1,0 +1,147 @@
+/* _content/AmberWatch/Areas/Admin/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-a9i5fasp0c] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-a9i5fasp0c] {
+  color: #0077cc;
+}
+
+.btn-primary[b-a9i5fasp0c] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-a9i5fasp0c], .nav-pills .show > .nav-link[b-a9i5fasp0c] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-a9i5fasp0c] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-a9i5fasp0c] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-a9i5fasp0c] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-a9i5fasp0c] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-a9i5fasp0c] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/AmberWatch/Areas/Customer/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-8ntfvuzzq7] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-8ntfvuzzq7] {
+  color: #0077cc;
+}
+
+.btn-primary[b-8ntfvuzzq7] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-8ntfvuzzq7], .nav-pills .show > .nav-link[b-8ntfvuzzq7] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-8ntfvuzzq7] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-8ntfvuzzq7] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-8ntfvuzzq7] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-8ntfvuzzq7] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-8ntfvuzzq7] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/AmberWatch/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-o5j81aazpw] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-o5j81aazpw] {
+  color: #0077cc;
+}
+
+.btn-primary[b-o5j81aazpw] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-o5j81aazpw], .nav-pills .show > .nav-link[b-o5j81aazpw] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-o5j81aazpw] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-o5j81aazpw] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-o5j81aazpw] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-o5j81aazpw] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-o5j81aazpw] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

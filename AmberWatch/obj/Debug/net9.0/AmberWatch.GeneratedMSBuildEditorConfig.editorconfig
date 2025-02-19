@@ -104,8 +104,48 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Watch/All.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcV2F0Y2hcQWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Watch/AutomaticAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcV2F0Y2hcQXV0b21hdGljQWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Watch/Casio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcV2F0Y2hcQ2FzaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Watch/Citizen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcV2F0Y2hcQ2l0aXplbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Watch/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcV2F0Y2hcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Watch/Female.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcV2F0Y2hcRmVtYWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Watch/Male.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcV2F0Y2hcTWFsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Watch/Orient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcV2F0Y2hcT3JpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Watch/PierreLannier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcV2F0Y2hcUGllcnJlTGFubmllci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Watch/QuartzAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcV2F0Y2hcUXVhcnR6QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Watch/Seiko.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcV2F0Y2hcU2Vpa28uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/_ViewImports.cshtml]

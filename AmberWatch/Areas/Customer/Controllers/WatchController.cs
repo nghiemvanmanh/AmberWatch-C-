@@ -28,5 +28,66 @@ namespace AmberWatch.Areas.Customer.Controllers
             }
             return View(watch);
         }
+
+        [HttpGet("Watch/All")]
+        public IActionResult All(){
+            var watch = _context.tbl_Watch.ToList();
+            return View(watch);
+        }
+        [HttpGet("Watch/AutomaticAll")]
+        public IActionResult AutomaticAll(){
+            var watchModelAuto = _context.tbl_Watch.Where(x => x.collection == "AUTOMATIC").ToList();
+            return View(watchModelAuto);
+                
+        }
+        [HttpGet("Watch/QuartzAll")]
+        public IActionResult QuartzAll(){
+            var watchModelQuartz = _context.tbl_Watch.Where(x => x.collection == "QUARTZ").ToList();
+            return View(watchModelQuartz);
+        }
+
+        [HttpGet("Watch/Male")]
+        public IActionResult Male(){
+            var watch = _context.tbl_Watch.Where(x => x.sex == "Nam").ToList();
+            return View(watch);
+        }
+
+        [HttpGet("Watch/Female")]
+        public IActionResult Female(){
+            var watch = _context.tbl_Watch.Where(x => x.sex == "Nữ").ToList();
+            return View(watch);
+        }
+
+        [HttpGet("Watch/Casio")]
+        public IActionResult Casio(){
+            var watch = _context.tbl_Watch.Where(x => x.model == "Casio").ToList();
+            return View(watch);
+        }
+
+        [HttpGet("Watch/Citizen")]
+        public IActionResult Citizen(){
+            var watch = _context.tbl_Watch.Where(x => x.model == "Citizen").ToList();
+            return View(watch);
+        }
+
+        [HttpGet("Watch/Orient")]
+        public IActionResult Orient(){
+            var watch = _context.tbl_Watch.Where(x => x.model == "Orient").ToList();
+            return View(watch);
+        }
+
+        [HttpGet("Watch/PierreLannier")]
+        public IActionResult PierreLannier(){
+            var watch = _context.tbl_Watch.Where(x => x.model == "Pierre Lannier").ToList();
+            return View(watch);
+        }
+
+        [HttpGet("Watch/Seiko")]
+        public IActionResult Seiko(){
+            var watch = _context.tbl_Watch.Where(x => x.model == "Seiko").ToList();
+            return View(watch);
+        }
+
+        
     }
 }
