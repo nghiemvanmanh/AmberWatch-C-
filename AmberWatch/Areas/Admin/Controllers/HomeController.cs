@@ -25,8 +25,13 @@ namespace AmberWatch.Areas.Admin.Controllers
         [HttpGet("Admin")]
         public IActionResult Index()
         {
-            return View();
-        }
+            if(HttpContext.Session.GetString("KeyAdmin") == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }else{
+                return View();    
+            }      
+        }   
 
         [HttpGet("Admin/Login")]
         public IActionResult Login(){
@@ -40,7 +45,7 @@ namespace AmberWatch.Areas.Admin.Controllers
                     return RedirectToAction("Index");
                 }
                 ViewBag.ErrorMessage = "Sai tài khoản hoặc mật khẩu!";
-            
+                HttpContext.Session.SetString("KeyAdmin", account.UserName);
                 return View();
             }
             return View();
