@@ -88,6 +88,13 @@ namespace AmberWatch.Areas.Customer.Controllers
             return View(watch);
         }
 
-        
+        [HttpGet("Watch/Order/{id}")]
+        public IActionResult Order(int id){
+            var watch = _context.tbl_Watch.Find(id);
+            if(watch == null){
+                return NotFound();
+            }
+            return View(watch);
+        }
     }
 }

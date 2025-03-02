@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0WIqmXxvrgc=",
+  "dgSpecHash": "ccSlyCtn1jQ=",
   "success": true,
-  "projectFilePath": "D:\\AmberWatch C#\\AmberWatch\\AmberWatch.csproj",
+  "projectFilePath": "d:\\AmberWatch C#\\AmberWatch\\AmberWatch.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

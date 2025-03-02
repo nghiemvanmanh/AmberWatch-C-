@@ -132,6 +132,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcV2F0Y2hcTWFsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Watch/Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcV2F0Y2hcT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [d:/AmberWatch C\#/AmberWatch/Areas/Customer/Views/Watch/Orient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcV2F0Y2hcT3JpZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

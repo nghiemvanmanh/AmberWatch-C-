@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AmberWatch C#\\AmberWatch\\AmberWatch.csproj": {}
+    "d:\\AmberWatch C#\\AmberWatch\\AmberWatch.csproj": {}
   },
   "projects": {
-    "D:\\AmberWatch C#\\AmberWatch\\AmberWatch.csproj": {
+    "d:\\AmberWatch C#\\AmberWatch\\AmberWatch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AmberWatch C#\\AmberWatch\\AmberWatch.csproj",
+        "projectUniqueName": "d:\\AmberWatch C#\\AmberWatch\\AmberWatch.csproj",
         "projectName": "AmberWatch",
-        "projectPath": "D:\\AmberWatch C#\\AmberWatch\\AmberWatch.csproj",
+        "projectPath": "d:\\AmberWatch C#\\AmberWatch\\AmberWatch.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\AmberWatch C#\\AmberWatch\\obj\\",
+        "outputPath": "d:\\AmberWatch C#\\AmberWatch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
