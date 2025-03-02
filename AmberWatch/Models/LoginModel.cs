@@ -8,6 +8,8 @@ namespace AmberWatch.Models
 {
     public class LoginModel
     {
+        [Key]
+        public int Id { get; set; }
         [Required(ErrorMessage = "Tên người dùng không được để trống")]
         public string UserName { get; set; }
 

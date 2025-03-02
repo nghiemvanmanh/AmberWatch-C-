@@ -1,0 +1,22 @@
+@model AmberWatch.Models.AccountModel
+@if (TempData["SuccessEdit"] != null)
+        {
+            <div class="alert alert-success text-center">
+                @TempData["SuccessEdit"]
+            </div>
+        }
+<div class="container mt-4">
+    <div class="card" style="max-width: 500px; margin: auto;">
+        <div class="card-header text-center">
+            <h3>Hồ Sơ Cá Nhân</h3>
+        </div>
+        <div class="card-body text-center">
+            <img src="/images/default-avatar.png" alt="Avatar" class="rounded-circle" width="150" height="150">
+            <h4 class="mt-3">@Model.FullName</h4>
+            <p><strong>Địa chỉ:</strong> @Model.Address</p>
+            <p><strong>Số điện thoại:</strong> @Model.SDT</p>
+            <p><strong>Mật khẩu:</strong> ******</p>
+            <a href="@Url.Action("Edit", "Account", new { id = @Model.Id })" class="btn btn-primary">Cập Nhật Tài Khoản</a>
+        </div>
+    </div>
+</div>
