@@ -10,5 +10,8 @@ namespace AmberWatch.Areas.Customer.Models
         public IEnumerable<WatchModel> watchModels {get; set; }
         public IEnumerable<WatchModel> watchModelAuto {get; set; }
         public IEnumerable<WatchModel> watchModelQuartz {get; set; }
+
+        public IEnumerable<CartModel> Cart {get; set; }
+        public IEnumerable<OrderModel> Order {get; set; }
     }
 }

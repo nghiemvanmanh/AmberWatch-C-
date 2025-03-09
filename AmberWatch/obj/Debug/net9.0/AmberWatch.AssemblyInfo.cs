@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AmberWatch")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd929bd4650c34243c273f6a03736355b67a52e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e11e7e62b1798d13035be820cad6b63f084d6251")]
 [assembly: System.Reflection.AssemblyProductAttribute("AmberWatch")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AmberWatch")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

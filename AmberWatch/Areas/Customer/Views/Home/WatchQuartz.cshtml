@@ -31,27 +31,27 @@
                                     style="max-width: 80%; padding: 10px;" alt="@watch.name">
                                 <span class="badge bg-danger position-absolute top-0 end-0 m-2">-10%</span>
                             </div>
-                            <div class="card-body text-center">
-                                <div style="width: 50%;background-color: aliceblue;border-radius: 10px;">
+                            <div class="card-body d-flex flex-column text-center">
+                                <div style="width: 50%; background-color: aliceblue; border-radius: 10px;">
                                     <p class="text-start" style="font-size: 15px; margin-left: 5px;"> ❤️ @watch.sex</p>
                                     <p class="text-start" style="font-size: 15px; margin-left: 5px;"> 🔖 @watch.model</p>
                                 </div>
                                 <div>
                                     <p class="text-center">@watch.name</p>
                                 </div>
-                                <div style="display:flex; justify-content: center;" class="text-center">
+                                <div class="mt-auto text-center" style="display: flex; justify-content: center;">
                                     <p class="text-decoration-line-through text-muted">@($"{watch.price:0,0}₫")</p>
                                     <p class="fw-bold" style="margin-left: 15px;">@($"{discountedPrice:0,0}₫")</p>
                                 </div>
-
                             </div>
+
                         </div>
                     </a>
                 </div>
             }
         </div>
         <!-- Nút "Xem thêm >" -->
-        <div class="text-center mt-4"  style="padding: 10px;">
+        <div class="text-center mt-4" style="padding: 10px;">
             <a href="@Url.Action("QuartzAll", "Watch", new { area = "Customer" })" class="btn btn-primary" style="background: none; border-color: #0057f575;
     color: #2619e7;">Xem thêm &gt;</a>
         </div>

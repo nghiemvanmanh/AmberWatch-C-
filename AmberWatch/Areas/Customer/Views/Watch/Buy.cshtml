@@ -1,0 +1,183 @@
+@model AmberWatch.Areas.Customer.Models.WatchModel;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"> <!-- Đường dẫn đến Bootstrap -->
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css"> <!-- Đường dẫn đến Font Awesome nếu cần -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .payment-method {
+            border: 1px solid #3d3d3d;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .payment-method:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-summary {
+            padding: 20px;
+            border: 1px solid #3d3d3d;
+            border-radius: 5px;
+        }
+
+        .order-summary h5 {
+            margin-bottom: 15px;
+        }
+
+        .total-price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .btn-pay {
+            background-color: #0077f5;
+            color: #fff;
+        }
+
+        .btn-pay:hover {
+            background-color: #005bb5;
+        }
+
+        .col-6 p {
+            font-size: 13px;
+            margin-top: -6px;
+        }
+
+        .info p {
+            display: flex;
+            place-content: space-between;
+        }
+
+        .text-content {
+            color: #4f555a;
+        }
+
+        .apply {
+            margin-bottom: 10px;
+        }
+
+        .apply:checked {
+            background-color: blue; /* Màu xanh lá */
+            border-color: blue;
+        }
+
+        .btn {
+            --bs-btn-border-color: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="javascript:history.back()">
+            <i class="bi bi-arrow-left-short" style="color: rgb(0, 0, 0); font-size: 40px;"></i>
+        </a>
+        <h2 class="mb-4">Kiểm tra Thanh toán</h2>
+        <div class="row">
+            <!-- Payment Methods -->
+            <div class="col-md-8">
+                <div class="payment-method">
+                    <h5>Thông tin người đặt hàng</h5>
+                    <div class="form-check">
+                        <p>Họ và Tên : <strong>@Context.Session.GetString("FullName")</strong></p>
+                        <p>Địa chỉ nhận hàng : <strong>@Context.Session.GetString("Address")</strong></p>
+                        <p>SĐT Liên hệ : <strong>@Context.Session.GetString("SDT")</strong></p>
+                    </div>
+                </div>
+                <div class="payment-method">
+                    <h5>Phương thức Thanh toán</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="paymentOption" id="creditCardOption" checked="true">
+                        <label class="form-check-label" for="creditCardOption">
+                            Thanh toán khi nhận hàng
+                        </label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input class="form-check-input" type="radio" name="paymentOption" id="creditCardOption">
+                        <label class="form-check-label" for="creditCardOption">
+                            Tài khoản ngân hàng
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- Order Summary -->
+            <div class="col-md-4">
+                <div class="order-summary">
+                    <h5>Tóm tắt đơn hàng</h5>
+                    <div class="order-info col-12">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="@Model.img" style="width: 100%;">
+                            </div>
+                            <div class="col-6">
+                                <p>@Model.name</p>
+                                <p class="text-content">@Model.brand</p>
+                                <p class="text-content">@(Model.price)đ</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <p class="text-content"><strong>Giá: </strong> @(Model.price)đ</p>
+                        <p class="text-content"><strong>Giảm giá: </strong> @(Model.price * 0.1)đ</p>
+                        <hr>
+                        <p><strong>Total:</strong> <span class="text">@(Model.price * 0.9)đ</span></p>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="apply" class="apply" id="termsCheckbox">
+                        <a style="color:#000000;">Bạn chấp nhận tất cả điều khoản bao gồm chính sách bảo mật, dịch
+                            vụ,...</a>
+                        <a href="#" id="addOrder" data-watchid="@Model.id_watch" class="btn btn-secondary me-md-2 mb-2 mb-md-0">Thanh toán</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+<script>
+
+     $(document).ready(function() {
+            $('.addOrder').click(function(e) {
+                e.preventDefault();  // Ngừng hành động mặc định của <a>
+
+                var watchId = $(this).data('watchid');  // Lấy CarID từ thuộc tính data-carid
+
+                $.ajax({
+                    url: '@Url.Action("AddOrder", "Watch")',  // Đường dẫn đến action
+                    type: 'POST',
+                    data: { watchId: watchId },  // Truyền dữ liệu vào controller
+                    success: function(response) {
+                        if (response.success) {
+                            alert(response.message);
+                            window.location.href = '@Url.Action("CartIndex","Watch")';
+                              // Hiển thị thông báo khi thêm vào yêu thích thành công
+                        } else {
+                            alert(response.message);  // Hiển thị thông báo lỗi
+                        }
+                    },
+                    error: function() {
+                        alert("Có lỗi xảy ra khi xử lý yêu cầu.");
+                    }
+                });
+            });
+        });
+</script>

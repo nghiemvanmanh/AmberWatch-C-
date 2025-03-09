@@ -21,9 +21,19 @@ namespace AmberWatch.Data
                 modelBuilder.Entity<WatchModel>()
                 .HasKey(p => p.id_watch);
                 base.OnModelCreating(modelBuilder);
+                
+                modelBuilder.Entity<CartModel>()
+                .HasKey(p => p.id_cart);
+                base.OnModelCreating(modelBuilder);
+
+                modelBuilder.Entity<OrderModel>()
+                .HasKey(p => p.id_order);
+                base.OnModelCreating(modelBuilder);
             }
 
         public DbSet<AccountModel> tbl_Account { get; set; }
         public DbSet<WatchModel> tbl_Watch { get; set; }
+        public DbSet<CartModel> tbl_Cart { get; set; }
+        public DbSet<OrderModel> tbl_Order { get; set; }
     }
 }

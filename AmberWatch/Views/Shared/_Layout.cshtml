@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -39,8 +38,12 @@
                                 BÁN CHẠY
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="banchayDropdown">
-                                <li><a class="dropdown-item" href="@Url.Action("Male", "Watch", new { area = "Customer" })">Đồng hồ nam</a></li>
-                                <li><a class="dropdown-item" href="@Url.Action("Female", "Watch", new { area = "Customer" })">Đồng hồ nữ</a></li>
+                                <li><a class="dropdown-item"
+                                        href="@Url.Action("Male", "Watch", new { area = "Customer" })">Đồng hồ nam</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="@Url.Action("Female", "Watch", new { area = "Customer" })">Đồng hồ nữ</a>
+                                </li>
                             </ul>
                         </li>
                         <!-- THƯƠNG HIỆU -->
@@ -50,11 +53,18 @@
                                 THƯƠNG HIỆU
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="thuonghieuDropdown">
-                                <li><a class="dropdown-item" href="@Url.Action("Casio", "Watch", new { area = "Customer" })">Casio</a></li>
-                                <li><a class="dropdown-item" href="@Url.Action("Seiko", "Watch", new { area = "Customer" })">Seiko</a></li>
-                                <li><a class="dropdown-item" href="@Url.Action("Citizen", "Watch", new { area = "Customer" })">Citizen</a></li>
-                                <li><a class="dropdown-item" href="@Url.Action("Orient", "Watch", new { area = "Customer" })">Orient</a></li>
-                                <li><a class="dropdown-item" href="@Url.Action("PierreLannier", "Watch", new { area = "Customer" })">PierreLannier</a></li>
+                                <li><a class="dropdown-item"
+                                        href="@Url.Action("Casio", "Watch", new { area = "Customer" })">Casio</a></li>
+                                <li><a class="dropdown-item"
+                                        href="@Url.Action("Seiko", "Watch", new { area = "Customer" })">Seiko</a></li>
+                                <li><a class="dropdown-item"
+                                        href="@Url.Action("Citizen", "Watch", new { area = "Customer" })">Citizen</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="@Url.Action("Orient", "Watch", new { area = "Customer" })">Orient</a></li>
+                                <li><a class="dropdown-item"
+                                        href="@Url.Action("PierreLannier", "Watch", new { area = "Customer" })">PierreLannier</a>
+                                </li>
                             </ul>
                         </li>
                         <!-- NAM -->
@@ -64,8 +74,12 @@
                                 NAM
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="namDropdown">
-                                <li><a class="dropdown-item" href="@Url.Action("AutomaticAll", "Watch", new { area = "Customer" })">Đồng hồ cơ</a></li>
-                                <li><a class="dropdown-item" href="@Url.Action("QuartzAll", "Watch", new { area = "Customer" })">Đồng hồ pin</a></li>
+                                <li><a class="dropdown-item"
+                                        href="@Url.Action("AutomaticAll", "Watch", new { area = "Customer" })">Đồng hồ
+                                        cơ</a></li>
+                                <li><a class="dropdown-item"
+                                        href="@Url.Action("QuartzAll", "Watch", new { area = "Customer" })">Đồng hồ
+                                        pin</a></li>
                             </ul>
                         </li>
                         <!-- NỮ -->
@@ -81,8 +95,10 @@
                         </li>
                     </ul>
                     <!-- Icon Tìm kiếm -->
-                    <form asp-controller="Home" asp-action="Search" asp-area="Customer" class="d-flex" method="get" role="search">
-                        <input class="form-control me-2" name="query" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                    <form asp-controller="Home" asp-action="Search" asp-area="Customer" class="d-flex" method="get"
+                        role="search">
+                        <input class="form-control me-2" name="query" type="search" placeholder="Tìm kiếm..."
+                            aria-label="Search">
                         <button class="btn btn-outline-warning" type="submit">
                             <i class="bi bi-search"></i>
                         </button>
@@ -115,6 +131,16 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link position-relative" href="@Url.Action("CartIndex", "Watch", new { area = "Customer" })">
+                                    <i class="bi bi-cart3 fs-5"></i> <!-- Icon giỏ hàng Bootstrap -->
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        0 <!-- Số lượng sản phẩm trong giỏ hàng, cập nhật động từ backend -->
+                                    </span>
+                                </a>
+                            </li>
+
                         }
                         else
                         {

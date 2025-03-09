@@ -24,21 +24,21 @@ namespace AmberWatch.Areas.Customer.Controllers
 
         [HttpGet("Watch")]
         public IActionResult Watch()
-        {   
+        {
             var watch = _context.tbl_Watch.ToList();
             return PartialView(watch);
         }
 
         [HttpGet("WatchAutomatic")]
         public IActionResult WatchAutomatic()
-        {   
+        {
             var watch = _context.tbl_Watch.Where(x => x.collection == "AUTOMATIC").ToList();
             return PartialView(watch);
         }
 
         [HttpGet("WatchQuartz")]
         public IActionResult WatchQuartz()
-        {   
+        {
             var watch = _context.tbl_Watch.Where(x => x.collection == "QUARTZ").ToList();
             return PartialView(watch);
         }
@@ -55,19 +55,60 @@ namespace AmberWatch.Areas.Customer.Controllers
         }
 
         [HttpGet("Search")]
-    public async Task<IActionResult> Search(string query){
-        var watch =await _context.tbl_Watch.ToListAsync();
-        if (!string.IsNullOrEmpty(query))
+        public async Task<IActionResult> Search(string query)
+        {
+            var watch = await _context.tbl_Watch.ToListAsync();
+            if (!string.IsNullOrEmpty(query))
             {
                 watch = watch
                     .Where(c => c.model.ToLower().Contains(query.ToLower()) || c.brand.ToLower().Contains(query.ToLower()))
                     .ToList();
             }
-        var model = new HomeModel{
-            watchModels = watch
-        };
-        ViewBag.key = query;
-        return View(model);  
-    }
+            var model = new HomeModel
+            {
+                watchModels = watch
+            };
+            ViewBag.key = query;
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateQuantity(int orderId, int quantity)
+        {
+            var order = await _context.tbl_Cart.FindAsync(orderId);
+            if (order == null)
+            {
+                return Json(new { success = false, message = "Không tìm thấy đơn hàng!" });
+            }
+
+            if (quantity < 1)
+            {
+                return Json(new { success = false, message = "Số lượng không hợp lệ!" });
+            }
+
+            order.quantity = quantity;  // ✅ Cập nhật số lượng
+            _context.tbl_Cart.Update(order);
+            await _context.SaveChangesAsync();
+
+            decimal totalPrice = (decimal)(order.price * quantity); // ✅ Tính lại tổng giá
+
+            return Json(new { success = true, newTotalPrice = totalPrice });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveCart(int orderId)
+        {
+            var order = await _context.tbl_Cart.FindAsync(orderId);
+            if (order == null)
+            {
+                return Json(new { success = false, message = "Không tìm thấy đơn hàng!" });
+            }
+
+            _context.tbl_Cart.Remove(order);
+            await _context.SaveChangesAsync();
+
+            return Json(new { success = true, message = "Sản phẩm đã bị xóa khỏi giỏ hàng!" });
+        }
+
     }
 }

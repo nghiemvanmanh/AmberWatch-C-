@@ -57,8 +57,10 @@
                             <p class="text-start">@Model.description</p>
                             @if(Context.Session.GetString("User") == null){
                                 <a href="@Url.Action("Login","Account", new { area = ""})" class="btn btn-primary w-100">Đặt hàng</a>
+                                <a href="@Url.Action("Login","Account", new { area = ""})" class="btn btn-success w-100" style="margin-top: 5px;">Thêm vào giỏ hàng</a>
                             }else{
-                                <a href="@Url.Action("Order","Watch" , new { id = Model.id_watch})" class="btn btn-primary w-100">Đặt hàng</a>
+                                <a href="@Url.Action("Buy","Watch" , new { id = Model.id_watch})" class="btn btn-primary w-100">Đặt hàng</a>
+                                <a href="#" id="addCart" data-watchid="@Model.id_watch" class="btn btn-secondary me-md-2 mb-2 mb-md-0">Thêm vào giỏ hàng</a>
                             }
                             
                             <div class="container mt-4">
@@ -136,3 +138,33 @@
 </body>
 
 </html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+ <script>
+        $(document).ready(function() {
+            $('#addCart').click(function(e) {
+                e.preventDefault();  // Ngừng hành động mặc định của <a>
+
+                var watchId = $(this).data('watchid');  // Lấy CarID từ thuộc tính data-carid
+
+                $.ajax({
+                    url: '@Url.Action("AddCart", "Watch")',  // Đường dẫn đến action
+                    type: 'POST',
+                    data: { watchId: watchId },  // Truyền dữ liệu vào controller
+                    success: function(response) {
+                        if (response.success) {
+                            alert(response.message);  // Hiển thị thông báo khi thêm vào yêu thích thành công
+                        } else {
+                            alert(response.message);  // Hiển thị thông báo lỗi
+                        }
+                    },
+                    error: function() {
+                        alert("Có lỗi xảy ra khi xử lý yêu cầu.");
+                    }
+                });
+            });
+        });
+
+
+
+    </script>

@@ -94,3 +94,58 @@ insert into tbl_Watch values(N'KOI', N'Việt Nam',N'Đồng Hồ
 KOI Noble K002.103.641.03.13.04 Nữ','QUARTZ',N'Quốc Tế 3 Năm',N'Xà Cừ', N'Trắng',N'Trắng', '5 ATM (50m)',
 N'Tròn',N'Dây Inox (Thép Không Gỉ)', N'Sapphire (Kính chống trầy)', N'Pin(Quartz)', N'Thép không gỉ 304', N'Nữ', '29 mm','7 mm', 'https://image.donghohaitrieu.com/wp-content/uploads/2024/01/2-1.jpg', 5480000,
 N'Phiên bản đồng hồ KOI K002.103.641.03.13.04 được trang bị lớp nền xà cừ tinh xảo, kết hợp cùng viền đá quyến rũ, phù hợp với phụ nữ Á Đông.')
+
+
+Create table tbl_Cart(
+	id_cart INT Primary key identity(1,1),
+	id_watchcart int,
+	id_user int,
+	model nvarchar(255)  ,
+	brand nvarchar(255)  ,
+	name nvarchar(max)  ,
+	collection nvarchar(max)  ,
+	insurance nvarchar(max)  ,
+	dialcolor nvarchar(255)  ,
+	wirecolor nvarchar(255)  ,
+	shellcolor nvarchar(255)  ,
+	waterresistant nvarchar(255)  ,
+	dialtype nvarchar(255)  ,
+	wiretype nvarchar(255)  ,
+	grasstype nvarchar(255)  ,
+	machinetype nvarchar(255)    ,
+	shellmaterial nvarchar(255),
+	sex nvarchar(10)  ,
+	dialsize nvarchar(255)  ,
+	dialthickness nvarchar(255),
+	img nvarchar(max)  ,
+	price float,
+	description nvarchar(max)  ,
+	quantity int
+)
+
+Create table tbl_Order(
+	id_order INT Primary key identity(1,1),
+	id_orderwatch int,
+	id_user int,
+	model nvarchar(255)  ,
+	brand nvarchar(255)  ,
+	name nvarchar(max)  ,
+	collection nvarchar(max)  ,
+	insurance nvarchar(max)  ,
+	dialcolor nvarchar(255)  ,
+	wirecolor nvarchar(255)  ,
+	shellcolor nvarchar(255)  ,
+	waterresistant nvarchar(255)  ,
+	dialtype nvarchar(255)  ,
+	wiretype nvarchar(255)  ,
+	grasstype nvarchar(255)  ,
+	machinetype nvarchar(255)    ,
+	shellmaterial nvarchar(255),
+	sex nvarchar(10)  ,
+	dialsize nvarchar(255)  ,
+	dialthickness nvarchar(255),
+	img nvarchar(max)  ,
+	price float,
+	description nvarchar(max)  ,
+	quantity int
+)
